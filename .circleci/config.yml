@@ -1,0 +1,12 @@
+version: 2.1
+workflows:
+  testing:
+    jobs:
+      - runner-test
+jobs:
+  runner-test:
+    docker:
+      - image: cimg/base:2021.11
+    resource_class: catherinepope/container-runner
+    steps:
+      - run: echo "Hellooooooo, I'm running on Runners with Container Runner!"
